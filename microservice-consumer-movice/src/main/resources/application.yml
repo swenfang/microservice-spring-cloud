@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-consumer-movice
+server:
+  port: 7901
+user:
+  userServicePath: http://localhost:7900/simple/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>microservice.spring.cloud</groupId>
+    <artifactId>microservice.spring.cloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--在这统一指定 SpringCloud 的版本，则子模块使用到Spring-cloud 就不用指定版本了
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>LATEST</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>-->
+
+    <modules>
+        <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-provider-user</module>
+        <module>microservice-consumer-movice</module>
+        <module>microservice-discovery-eureka</module>
+    </modules>
+
+
+</project>
