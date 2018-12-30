@@ -18,13 +18,13 @@ public class MovieController {
     @Autowired
     private LoadBalancerClient loadBalancerClient;
 
-    // HAProxy Heartbeat
-    // microservice-provider-user/simple 是 (virtual IP)VIP 地址，也称虚拟地址
-    // "http://localhost:7900/simple/"
-    // 即 "microservice-provider-user/simple" 是服务提供者的IP
+
     @GetMapping("/movie/{id}")
     public User findById(@PathVariable Long id){
+        ServiceInstance serviceInstance = this.loadBalancerClient.choose("microservice-provider-user");
+        System.out.println("====:"+serviceInstance.getHost()+":"+serviceInstance.getPort()+":"+serviceInstance.getServiceId());
         return this.restTemplate.getForObject("http://microservice-provider-user/simple/" + id,User.class);
+
     }
 
     @GetMapping("/test")

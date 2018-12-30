@@ -23,6 +23,9 @@
 
     <modules>
         <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-consumer-movie-ribbon-properties-customizing</module>
+        <module>microservice-consumer-movie-ribbon-without-eureka</module>
+        <module>microservice-consumer-movice-feign</module>
         <module>microservice-provider-user</module>
         <module>microservice-consumer-movice</module>
         <module>microservice-discovery-eureka</module>
