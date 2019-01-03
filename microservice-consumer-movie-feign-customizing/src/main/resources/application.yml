@@ -12,3 +12,6 @@ eureka:
 logging:
   level:
     com.itmuch.cloud.feign.UserFeignClient: DEBUG
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 5000
+#hystrix.command.default.execution.timeout.enable: false
+feign.hystrix.enable: false
