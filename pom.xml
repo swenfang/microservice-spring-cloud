@@ -8,6 +8,8 @@
     <artifactId>microservice.spring.cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
+
     <!--在这统一指定 SpringCloud 的版本，则子模块使用到Spring-cloud 就不用指定版本了
     <dependencyManagement>
         <dependencies>
@@ -30,6 +32,7 @@
         <module>microservice-provider-user</module>
         <module>microservice-consumer-movice</module>
         <module>microservice-discovery-eureka</module>
+        <module>microservice-discovery-eureka-ha</module>
     </modules>
 
 
