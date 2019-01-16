@@ -9,7 +9,7 @@ eureka:
     register-with-eureka: true #允许注册自己
     fetch-registry: true
     service-url:
-      defaultZone: http://peer2:8762/eureka/
+      defaultZone: http://peer2:8762/eureka/,http://peer3:8763/eureka/
 ---
 server:
   port: 8762
@@ -22,4 +22,17 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer3:8763/eureka/
+---
+server:
+  port: 8763
+spring:
+  profiles: peer3
+eureka:
+  instance:
+    hostname: peer3
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
