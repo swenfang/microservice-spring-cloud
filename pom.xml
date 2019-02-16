@@ -25,8 +25,10 @@
 
     <modules>
         <module>microservice-consumer-movie-ribbon</module>
+        <module>microservice-consumer-movie-ribbon-test</module>
         <module>microservice-consumer-movie-ribbon-properties-customizing</module>
         <module>microservice-consumer-movie-ribbon-without-eureka</module>
+        <module>microservice-consumer-movie-ribbon-with-hystrix</module>
         <module>microservice-consumer-movice-feign</module>
         <module>microservice-consumer-movie-feign-customizing</module>
         <module>microservice-provider-user</module>

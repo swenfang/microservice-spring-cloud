@@ -1,7 +1,5 @@
 package com.itmuch.cloud.entity;
 
-import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -10,29 +8,12 @@ import java.math.BigDecimal;
   * @Description:
   */
 
-@Entity
-public class User implements Serializable {
-
-    private static final long serialVersionUID = -480131156898921128L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class User{
     private Long id;
-    @Column
     private String username;
-    @Column
     private String name;
-    @Column
     private Short age;
-    @Column
     private BigDecimal balance;
-
-    public User() {
-    }
-    public User(Long id,String username) {
-        this.id = id;
-        this.username = username;
-    }
 
     public Long getId() {
         return id;
