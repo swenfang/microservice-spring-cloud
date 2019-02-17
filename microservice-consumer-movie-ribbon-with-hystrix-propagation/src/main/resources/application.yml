@@ -3,6 +3,9 @@ spring:
     name: microservice-consumer-movie-ribbon-with-hystrix-propagation
 server:
   port: 8010
+management:
+  security:
+    enabled: false #关掉安全认证
 eureka:
   client:
     service-url:

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: microservice-consumer-movice-feign-with-hystrix
+server:
+  port: 7901
+management:
+  security:
+    enabled: false #关掉安全认证
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+feign:
+  hystrix:
+    enabled: true
